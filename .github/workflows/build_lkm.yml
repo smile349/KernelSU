@@ -1,0 +1,78 @@
+name: Build KernelSU LKM
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build KernelSU LKM by ${{ github.actor }}
+    runs-on: ubuntu-latest
+
+    env:
+      KERNEL_SOURCE: https://github.com/smile349/android_kernel_T
+      KERNEL_SOURCE_BRANCH: T
+      KERNELSU_TAG: main
+      ENABLE_KERNELSU: 'true'
+      PATCH_PATH: ''
+      IS_DEBUG_KERNEL: 'false'
+
+    steps:
+      - name: Set up environment
+        run: |
+          echo "Setting up environment variables..."
+          echo "KERNEL_SOURCE=${{ env.KERNEL_SOURCE }}" >> $GITHUB_ENV
+          echo "KERNEL_SOURCE_BRANCH=${{ env.KERNEL_SOURCE_BRANCH }}" >> $GITHUB_ENV
+          echo "KERNELSU_TAG=${{ env.KERNELSU_TAG }}" >> $GITHUB_ENV
+          echo "ENABLE_KERNELSU=${{ env.ENABLE_KERNELSU }}" >> $GITHUB_ENV
+          echo "PATCH_PATH=${{ env.PATCH_PATH }}" >> $GITHUB_ENV
+          echo "IS_DEBUG_KERNEL=${{ env.IS_DEBUG_KERNEL }}" >> $GITHUB_ENV
+
+      - name: Clone Kernel Source
+        run: |
+          git clone --depth=1 -b ${{ env.KERNEL_SOURCE_BRANCH }} ${{ env.KERNEL_SOURCE }} kernel
+
+      - name: Check Kernel Source Directory
+        run: |
+          ls -la kernel
+
+      - name: Setup KernelSU
+        if: env.ENABLE_KERNELSU == 'true'
+        env:
+          PATCH_PATH: ${{ env.PATCH_PATH }}
+          IS_DEBUG_KERNEL: ${{ env.IS_DEBUG_KERNEL }}
+        run: |
+          cd $GITHUB_WORKSPACE/kernel
+          echo "[+] KernelSU setup"
+          GKI_ROOT=$(pwd)
+          echo "[+] GKI_ROOT: $GKI_ROOT"
+          echo "[+] Copy KernelSU driver to $GKI_ROOT/drivers"
+          git clone --depth=1 -b ${{ env.KERNELSU_TAG }} https://github.com/Kernel-SU/KernelSU.git kernelsu
+          ln -sf $GITHUB_WORKSPACE/kernelsu/kernel $GKI_ROOT/drivers/kernelsu
+          echo "[+] Add KernelSU driver to Makefile"
+          DRIVER_MAKEFILE=$GKI_ROOT/drivers/Makefile
+          DRIVER_KCONFIG=$GKI_ROOT/drivers/Kconfig
+          grep -q "kernelsu" "$DRIVER_MAKEFILE" || printf "\nobj-\$(CONFIG_KSU) += kernelsu/\n" >> "$DRIVER_MAKEFILE"
+          grep -q "kernelsu" "$DRIVER_KCONFIG" || sed -i "/endmenu/i\\source \"drivers/kernelsu/Kconfig\"" "$DRIVER_KCONFIG"
+          echo "[+] Apply KernelSU patches"
+          cd $GKI_ROOT && git apply $GITHUB_WORKSPACE/kernelsu/.github/patches/$PATCH_PATH/*.patch || echo "[-] No patch found"
+
+          if [ "$IS_DEBUG_KERNEL" = "true" ]; then
+            echo "[+] Enable debug features for kernel"
+            printf "\nccflags-y += -DCONFIG_KSU_DEBUG\n" >> $GITHUB_WORKSPACE/kernelsu/kernel/Makefile
+          fi
+          echo "[+] KernelSU setup done."
+
+      - name: Build KernelSU LKM
+    
+        run: |
+          cd kernel
+          make modules_prepare
+          make M=drivers/kernelsu
+
+      - name: Upload KernelSU Module
+        if: env.ENABLE_KERNELSU == 'true'
+        uses: actions/upload-artifact@v3
+        with:
+          name: KernelSU Modules
+          path: |
+            kernel/drivers/kernelsu/*.ko
