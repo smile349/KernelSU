@@ -35,35 +35,37 @@ jobs:
         run: |
           ls -la kernel
 
+      - name: Clone KernelSU
+        if: env.ENABLE_KERNELSU == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: Kernel-SU/KernelSU
+          ref: ${{ env.KERNELSU_TAG }}
+          path: kernelsu
+
       - name: Setup KernelSU
         if: env.ENABLE_KERNELSU == 'true'
-        env:
-          PATCH_PATH: ${{ env.PATCH_PATH }}
-          IS_DEBUG_KERNEL: ${{ env.IS_DEBUG_KERNEL }}
         run: |
-          cd $GITHUB_WORKSPACE/kernel
+          cd kernel
           echo "[+] KernelSU setup"
-          GKI_ROOT=$(pwd)
-          echo "[+] GKI_ROOT: $GKI_ROOT"
-          echo "[+] Copy KernelSU driver to $GKI_ROOT/drivers"
-          git clone --depth=1 -b ${{ env.KERNELSU_TAG }} https://github.com/Kernel-SU/KernelSU.git kernelsu
-          ln -sf $GITHUB_WORKSPACE/kernelsu/kernel $GKI_ROOT/drivers/kernelsu
+          echo "[+] Copy KernelSU driver to kernel/drivers"
+          cp -r $GITHUB_WORKSPACE/kernelsu/kernel kernel/drivers/kernelsu
           echo "[+] Add KernelSU driver to Makefile"
-          DRIVER_MAKEFILE=$GKI_ROOT/drivers/Makefile
-          DRIVER_KCONFIG=$GKI_ROOT/drivers/Kconfig
+          DRIVER_MAKEFILE=drivers/Makefile
+          DRIVER_KCONFIG=drivers/Kconfig
           grep -q "kernelsu" "$DRIVER_MAKEFILE" || printf "\nobj-\$(CONFIG_KSU) += kernelsu/\n" >> "$DRIVER_MAKEFILE"
           grep -q "kernelsu" "$DRIVER_KCONFIG" || sed -i "/endmenu/i\\source \"drivers/kernelsu/Kconfig\"" "$DRIVER_KCONFIG"
           echo "[+] Apply KernelSU patches"
-          cd $GKI_ROOT && git apply $GITHUB_WORKSPACE/kernelsu/.github/patches/$PATCH_PATH/*.patch || echo "[-] No patch found"
+          git apply $GITHUB_WORKSPACE/kernelsu/.github/patches/$PATCH_PATH/*.patch || echo "[-] No patch found"
 
           if [ "$IS_DEBUG_KERNEL" = "true" ]; then
             echo "[+] Enable debug features for kernel"
-            printf "\nccflags-y += -DCONFIG_KSU_DEBUG\n" >> $GITHUB_WORKSPACE/kernelsu/kernel/Makefile
+            printf "\nccflags-y += -DCONFIG_KSU_DEBUG\n" >> drivers/kernelsu/Makefile
           fi
           echo "[+] KernelSU setup done."
 
       - name: Build KernelSU LKM
-    
+        if: env.ENABLE_KERNELSU == 'true'
         run: |
           cd kernel
           make modules_prepare
