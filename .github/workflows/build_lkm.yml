@@ -11,6 +11,7 @@ jobs:
     env:
       KERNEL_SOURCE: https://github.com/smile349/android_kernel_T
       KERNEL_SOURCE_BRANCH: T
+      KERNELSU_SOURCE: https://github.com/tiann/KernelSU
       KERNELSU_TAG: main
       ENABLE_KERNELSU: 'true'
       PATCH_PATH: ''
@@ -22,6 +23,7 @@ jobs:
           echo "Setting up environment variables..."
           echo "KERNEL_SOURCE=${{ env.KERNEL_SOURCE }}" >> $GITHUB_ENV
           echo "KERNEL_SOURCE_BRANCH=${{ env.KERNEL_SOURCE_BRANCH }}" >> $GITHUB_ENV
+          echo "KERNELSU_SOURCE=${{ env.KERNELSU_SOURCE }}" >> $GITHUB_ENV
           echo "KERNELSU_TAG=${{ env.KERNELSU_TAG }}" >> $GITHUB_ENV
           echo "ENABLE_KERNELSU=${{ env.ENABLE_KERNELSU }}" >> $GITHUB_ENV
           echo "PATCH_PATH=${{ env.PATCH_PATH }}" >> $GITHUB_ENV
@@ -37,11 +39,8 @@ jobs:
 
       - name: Clone KernelSU
         if: env.ENABLE_KERNELSU == 'true'
-        uses: actions/checkout@v4
-        with:
-          repository: Kernel-SU/KernelSU
-          ref: ${{ env.KERNELSU_TAG }}
-          path: kernelsu
+        run: |
+          git clone --depth=1 -b ${{ env.KERNELSU_TAG }} ${{ env.KERNELSU_SOURCE }} kernelsu
 
       - name: Setup KernelSU
         if: env.ENABLE_KERNELSU == 'true'
