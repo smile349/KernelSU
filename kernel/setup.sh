@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-GKI_ROOT=$(pwd)
+GKI_ROOT=GKI_ROOT=$(cd "$(dirname "$0")" && pwd)
 
 display_usage() {
     echo "Usage: $0 [--cleanup | <commit-or-tag>]"
