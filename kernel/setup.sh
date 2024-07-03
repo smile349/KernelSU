@@ -1,8 +1,7 @@
 #!/bin/sh
 set -eu
 
-GKI_ROOT=GKI_ROOT=$(cd "$(dirname "$0")" && pwd)
-
+GKI_ROOT=$(cd "$(dirname "$0")" && pwd)
 display_usage() {
     echo "Usage: $0 [--cleanup | <commit-or-tag>]"
     echo "  --cleanup:              Cleans up previous modifications made by the script."
@@ -12,8 +11,8 @@ display_usage() {
 }
 
 initialize_variables() {
-    if test -d "$GKI_ROOT/drivers"; then
-         DRIVER_DIR="$GKI_ROOT/drivers"
+    if test -d "$GKI_ROOT/common/drivers"; then
+         DRIVER_DIR="$GKI_ROOT/common/drivers"
     elif test -d "$GKI_ROOT/drivers"; then
          DRIVER_DIR="$GKI_ROOT/drivers"
     else
