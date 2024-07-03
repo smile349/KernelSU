@@ -12,8 +12,8 @@ display_usage() {
 }
 
 initialize_variables() {
-    if test -d "$GKI_ROOT/android-kernel/drivers"; then
-         DRIVER_DIR="$GKI_ROOT/android-kernel/drivers"
+    if test -d "$GKI_ROOT/drivers"; then
+         DRIVER_DIR="$GKI_ROOT/drivers"
     elif test -d "$GKI_ROOT/drivers"; then
          DRIVER_DIR="$GKI_ROOT/drivers"
     else
