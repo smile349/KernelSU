@@ -113,13 +113,10 @@ jobs:
           ./gradlew clean assembleRelease
 
       - name: Upload build artifact to GitHub Releases
-        uses: softprops/action-gh-release@v1
-        if: ${{ ( github.event_name != 'pull_request' && github.ref == 'refs/heads/main' ) || github.ref_type == 'tag' }}
+        uses: actions/upload-artifact@v4
         with:
-          files: manager/app/build/outputs/apk/release/*.apk
-          token: ${{ secrets.GITHUB_TOKEN }}
-          draft: false
-          prerelease: false
+          name: "manager"
+          path: "manager/app/build/outputs/apk/release/*.apk"
           
       - name: Upload mappings
         uses: actions/upload-artifact@v4
