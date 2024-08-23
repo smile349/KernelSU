@@ -1,4 +1,4 @@
-package com.su.mamager.ui.screen
+package com.su.manager.ui.screen
 
 import androidx.annotation.StringRes
 import androidx.compose.animation.Crossfade
@@ -52,22 +52,22 @@ import coil.request.ImageRequest
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.launch
-import com.su.mamager.Natives
-import com.su.mamager.R
-import com.su.mamager.ui.component.SwitchItem
-import com.su.mamager.ui.component.profile.AppProfileConfig
-import com.su.mamager.ui.component.profile.RootProfileConfig
-import com.su.mamager.ui.component.profile.TemplateConfig
-import com.su.mamager.ui.screen.destinations.AppProfileTemplateScreenDestination
-import com.su.mamager.ui.screen.destinations.TemplateEditorScreenDestination
-import com.su.mamager.ui.util.LocalSnackbarHost
-import com.su.mamager.ui.util.forceStopApp
-import com.su.mamager.ui.util.getSepolicy
-import com.su.mamager.ui.util.launchApp
-import com.su.mamager.ui.util.restartApp
-import com.su.mamager.ui.util.setSepolicy
-import com.su.mamager.ui.viewmodel.SuperUserViewModel
-import com.su.mamager.ui.viewmodel.getTemplateInfoById
+import com.su.manager.Natives
+import com.su.manager.R
+import com.su.manager.ui.component.SwitchItem
+import com.su.manager.ui.component.profile.AppProfileConfig
+import com.su.manager.ui.component.profile.RootProfileConfig
+import com.su.manager.ui.component.profile.TemplateConfig
+import com.su.manager.ui.screen.destinations.AppProfileTemplateScreenDestination
+import com.su.manager.ui.screen.destinations.TemplateEditorScreenDestination
+import com.su.manager.ui.util.LocalSnackbarHost
+import com.su.manager.ui.util.forceStopApp
+import com.su.manager.ui.util.getSepolicy
+import com.su.manager.ui.util.launchApp
+import com.su.manager.ui.util.restartApp
+import com.su.manager.ui.util.setSepolicy
+import com.su.manager.ui.viewmodel.SuperUserViewModel
+import com.su.manager.ui.viewmodel.getTemplateInfoById
 
 /**
  * @author weishu

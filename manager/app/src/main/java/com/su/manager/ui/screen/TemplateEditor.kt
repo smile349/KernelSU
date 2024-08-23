@@ -1,4 +1,4 @@
-package com.su.mamager.ui.screen
+package com.su.manager.ui.screen
 
 import android.widget.Toast
 import androidx.activity.compose.BackHandler
@@ -38,14 +38,14 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.result.ResultBackNavigator
-import com.su.mamager.Natives
-import com.su.mamager.R
-import com.su.mamager.ui.component.profile.RootProfileConfig
-import com.su.mamager.ui.util.deleteAppProfileTemplate
-import com.su.mamager.ui.util.getAppProfileTemplate
-import com.su.mamager.ui.util.setAppProfileTemplate
-import com.su.mamager.ui.viewmodel.TemplateViewModel
-import com.su.mamager.ui.viewmodel.toJSON
+import com.su.manager.Natives
+import com.su.manager.R
+import com.su.manager.ui.component.profile.RootProfileConfig
+import com.su.manager.ui.util.deleteAppProfileTemplate
+import com.su.manager.ui.util.getAppProfileTemplate
+import com.su.manager.ui.util.setAppProfileTemplate
+import com.su.manager.ui.viewmodel.TemplateViewModel
+import com.su.manager.ui.viewmodel.toJSON
 
 /**
  * @author weishu

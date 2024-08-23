@@ -1,4 +1,4 @@
-package com.su.mamager.ui.screen
+package com.su.manager.ui.screen
 
 import android.net.Uri
 import android.os.Environment
@@ -41,15 +41,15 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.parcelize.Parcelize
-import com.su.mamager.R
-import com.su.mamager.ui.component.KeyEventBlocker
-import com.su.mamager.ui.util.LkmSelection
-import com.su.mamager.ui.util.LocalSnackbarHost
-import com.su.mamager.ui.util.flashModule
-import com.su.mamager.ui.util.installBoot
-import com.su.mamager.ui.util.reboot
-import com.su.mamager.ui.util.restoreBoot
-import com.su.mamager.ui.util.uninstallPermanently
+import com.su.manager.R
+import com.su.manager.ui.component.KeyEventBlocker
+import com.su.manager.ui.util.LkmSelection
+import com.su.manager.ui.util.LocalSnackbarHost
+import com.su.manager.ui.util.flashModule
+import com.su.manager.ui.util.installBoot
+import com.su.manager.ui.util.reboot
+import com.su.manager.ui.util.restoreBoot
+import com.su.manager.ui.util.uninstallPermanently
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date

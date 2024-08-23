@@ -1,4 +1,4 @@
-package com.su.mamager.ui.component
+package com.su.manager.ui.component
 
 import androidx.compose.foundation.clickable
 import androidx.compose.material3.Icon

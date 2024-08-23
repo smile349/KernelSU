@@ -1,4 +1,4 @@
-package com.su.mamager.ui.component
+package com.su.manager.ui.component
 
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.Box

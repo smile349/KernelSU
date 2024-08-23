@@ -1,4 +1,4 @@
-package com.su.mamager.ui.viewmodel
+package com.su.manager.ui.viewmodel
 
 import android.os.Parcelable
 import android.util.Log
@@ -10,12 +10,12 @@ import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.parcelize.Parcelize
-import com.su.mamager.Natives
-import com.su.mamager.profile.Capabilities
-import com.su.mamager.profile.Groups
-import com.su.mamager.ui.util.getAppProfileTemplate
-import com.su.mamager.ui.util.listAppProfileTemplates
-import com.su.mamager.ui.util.setAppProfileTemplate
+import com.su.manager.Natives
+import com.su.manager.profile.Capabilities
+import com.su.manager.profile.Groups
+import com.su.manager.ui.util.getAppProfileTemplate
+import com.su.manager.ui.util.listAppProfileTemplates
+import com.su.manager.ui.util.setAppProfileTemplate
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONArray

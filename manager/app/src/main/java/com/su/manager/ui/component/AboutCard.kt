@@ -1,4 +1,4 @@
-package com.su.mamager.ui.component
+package com.su.manager.ui.component
 
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
@@ -29,8 +29,8 @@ import androidx.compose.ui.window.Dialog
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.text.HtmlCompat
 import com.google.accompanist.drawablepainter.rememberDrawablePainter
-import com.su.mamager.BuildConfig
-import com.su.mamager.R
+import com.su.manager.BuildConfig
+import com.su.manager.R
 
 @Preview
 @Composable

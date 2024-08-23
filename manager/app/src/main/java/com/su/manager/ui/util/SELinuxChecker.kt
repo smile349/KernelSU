@@ -1,9 +1,9 @@
-package com.su.mamager.ui.util
+package com.su.manager.ui.util
 
 import androidx.compose.ui.res.stringResource
 import androidx.compose.runtime.Composable
 import com.topjohnwu.superuser.Shell
-import com.su.mamager.R
+import com.su.manager.R
 
 @Composable
 fun getSELinuxStatus(): String {

@@ -1,4 +1,4 @@
-package com.su.mamager.profile
+package com.su.manager.profile
 
 /**
  * https://cs.android.com/android/platform/superproject/main/+/main:system/core/libcutils/include/private/android_filesystem_config.h

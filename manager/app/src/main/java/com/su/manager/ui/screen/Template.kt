@@ -1,4 +1,4 @@
-package com.su.mamager.ui.screen
+package com.su.manager.ui.screen
 
 import android.widget.Toast
 import androidx.compose.foundation.clickable
@@ -52,9 +52,9 @@ import com.ramcosta.composedestinations.result.ResultRecipient
 import com.ramcosta.composedestinations.result.getOr
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import com.su.mamager.R
-import com.su.mamager.ui.screen.destinations.TemplateEditorScreenDestination
-import com.su.mamager.ui.viewmodel.TemplateViewModel
+import com.su.manager.R
+import com.su.manager.ui.screen.destinations.TemplateEditorScreenDestination
+import com.su.manager.ui.viewmodel.TemplateViewModel
 
 /**
  * @author weishu

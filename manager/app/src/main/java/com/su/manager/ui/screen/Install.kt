@@ -1,4 +1,4 @@
-package com.su.mamager.ui.screen
+package com.su.manager.ui.screen
 
 import android.app.Activity
 import android.content.Intent
@@ -42,17 +42,17 @@ import com.maxkeppeler.sheets.list.models.ListSelection
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import com.ramcosta.composedestinations.navigation.EmptyDestinationsNavigator
-import com.su.mamager.R
-import com.su.mamager.ui.component.DialogHandle
-import com.su.mamager.ui.component.rememberConfirmDialog
-import com.su.mamager.ui.component.rememberCustomDialog
-import com.su.mamager.ui.screen.destinations.FlashScreenDestination
-import com.su.mamager.ui.util.LkmSelection
-import com.su.mamager.ui.util.getCurrentKmi
-import com.su.mamager.ui.util.getSupportedKmis
-import com.su.mamager.ui.util.isAbDevice
-import com.su.mamager.ui.util.isInitBoot
-import com.su.mamager.ui.util.rootAvailable
+import com.su.manager.R
+import com.su.manager.ui.component.DialogHandle
+import com.su.manager.ui.component.rememberConfirmDialog
+import com.su.manager.ui.component.rememberCustomDialog
+import com.su.manager.ui.screen.destinations.FlashScreenDestination
+import com.su.manager.ui.util.LkmSelection
+import com.su.manager.ui.util.getCurrentKmi
+import com.su.manager.ui.util.getSupportedKmis
+import com.su.manager.ui.util.isAbDevice
+import com.su.manager.ui.util.isInitBoot
+import com.su.manager.ui.util.rootAvailable
 
 /**
  * @author weishu

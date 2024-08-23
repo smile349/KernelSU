@@ -1,4 +1,4 @@
-package com.su.mamager.ui.screen
+package com.su.manager.ui.screen
 
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
@@ -6,10 +6,10 @@ import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.ramcosta.composedestinations.spec.DirectionDestinationSpec
-import com.su.mamager.R
-import com.su.mamager.ui.screen.destinations.HomeScreenDestination
-import com.su.mamager.ui.screen.destinations.SuperUserScreenDestination
-import com.su.mamager.ui.screen.destinations.ModuleScreenDestination
+import com.su.manager.R
+import com.su.manager.ui.screen.destinations.HomeScreenDestination
+import com.su.manager.ui.screen.destinations.SuperUserScreenDestination
+import com.su.manager.ui.screen.destinations.ModuleScreenDestination
 
 enum class BottomBarDestination(
     val direction: DirectionDestinationSpec,

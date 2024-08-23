@@ -1,4 +1,4 @@
-package com.su.mamager.ui.viewmodel
+package com.su.manager.ui.viewmodel
 
 import android.content.ComponentName
 import android.content.Intent
@@ -18,12 +18,12 @@ import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.parcelize.Parcelize
-import com.su.mamager.IKsuInterface
-import com.su.mamager.Natives
-import com.su.mamager.ksuApp
-import com.su.mamager.ui.KsuService
-import com.su.mamager.ui.util.HanziToPinyin
-import com.su.mamager.ui.util.KsuCli
+import com.su.manager.IKsuInterface
+import com.su.manager.Natives
+import com.su.manager.ksuApp
+import com.su.manager.ui.KsuService
+import com.su.manager.ui.util.HanziToPinyin
+import com.su.manager.ui.util.KsuCli
 import java.text.Collator
 import java.util.*
 import kotlin.coroutines.resume

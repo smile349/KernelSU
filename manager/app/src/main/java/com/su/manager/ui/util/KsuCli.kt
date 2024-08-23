@@ -1,4 +1,4 @@
-package com.su.mamager.ui.util
+package com.su.manager.ui.util
 
 import android.content.ContentResolver
 import android.content.Context
@@ -17,9 +17,9 @@ import com.topjohnwu.superuser.io.SuFile
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.parcelize.Parcelize
-import com.su.mamager.BuildConfig
-import com.su.mamager.Natives
-import com.su.mamager.ksuApp
+import com.su.manager.BuildConfig
+import com.su.manager.Natives
+import com.su.manager.ksuApp
 import org.json.JSONArray
 import java.io.File
 

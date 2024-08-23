@@ -1,4 +1,4 @@
-package com.su.mamager.ui.webui
+package com.su.manager.ui.webui
 
 import android.app.Activity
 import android.content.Context
@@ -14,8 +14,8 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.topjohnwu.superuser.CallbackList
 import com.topjohnwu.superuser.ShellUtils
-import com.su.mamager.ui.util.createRootShell
-import com.su.mamager.ui.util.withNewRootShell
+import com.su.manager.ui.util.createRootShell
+import com.su.manager.ui.util.withNewRootShell
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.concurrent.CompletableFuture

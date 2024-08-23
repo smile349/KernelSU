@@ -1,4 +1,4 @@
-package com.su.mamager.profile
+package com.su.manager.profile
 
 /**
  * @author weishu

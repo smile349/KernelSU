@@ -1,4 +1,4 @@
-package com.su.mamager.ui.util
+package com.su.manager.ui.util
 
 import android.content.ContentResolver
 import android.content.Context
@@ -7,8 +7,8 @@ import android.os.Build
 import android.os.ParcelFileDescriptor
 import android.system.Os
 import com.topjohnwu.superuser.ShellUtils
-import com.su.mamager.Natives
-import com.su.mamager.ui.screen.getManagerVersion
+import com.su.manager.Natives
+import com.su.manager.ui.screen.getManagerVersion
 import java.io.File
 import java.io.FileOutputStream
 import java.io.FileWriter

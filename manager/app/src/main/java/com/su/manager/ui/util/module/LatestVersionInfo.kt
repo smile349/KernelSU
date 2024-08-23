@@ -1,4 +1,4 @@
-package com.su.mamager.ui.util.module
+package com.su.manager.ui.util.module
 
 data class LatestVersionInfo(
     val versionCode : Int = 0,

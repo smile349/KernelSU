@@ -1,4 +1,4 @@
-package com.su.mamager.ui
+package com.su.manager.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -23,13 +23,13 @@ import androidx.navigation.compose.rememberNavController
 import com.ramcosta.composedestinations.DestinationsNavHost
 import com.ramcosta.composedestinations.navigation.popBackStack
 import com.ramcosta.composedestinations.utils.isRouteOnBackStackAsState
-import com.su.mamager.Natives
-import com.su.mamager.ksuApp
-import com.su.mamager.ui.screen.BottomBarDestination
-import com.su.mamager.ui.screen.NavGraphs
-import com.su.mamager.ui.theme.KernelSUTheme
-import com.su.mamager.ui.util.LocalSnackbarHost
-import com.su.mamager.ui.util.rootAvailable
+import com.su.manager.Natives
+import com.su.manager.ksuApp
+import com.su.manager.ui.screen.BottomBarDestination
+import com.su.manager.ui.screen.NavGraphs
+import com.su.manager.ui.theme.KernelSUTheme
+import com.su.manager.ui.util.LocalSnackbarHost
+import com.su.manager.ui.util.rootAvailable
 
 class MainActivity : ComponentActivity() {
 

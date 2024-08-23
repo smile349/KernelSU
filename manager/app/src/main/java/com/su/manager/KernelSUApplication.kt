@@ -1,4 +1,4 @@
-package com.su.mamager
+package com.su.manager
 
 import android.app.Application
 import coil.Coil

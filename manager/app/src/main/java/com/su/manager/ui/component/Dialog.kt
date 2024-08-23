@@ -1,4 +1,4 @@
-package com.su.mamager.ui.component
+package com.su.manager.ui.component
 
 import android.graphics.text.LineBreaker
 import android.os.Parcelable

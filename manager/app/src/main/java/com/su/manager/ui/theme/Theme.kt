@@ -1,4 +1,4 @@
-package com.su.mamager.ui.theme
+package com.su.manager.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

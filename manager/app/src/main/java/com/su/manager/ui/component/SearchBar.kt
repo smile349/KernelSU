@@ -1,4 +1,4 @@
-package com.su.mamager.ui.component
+package com.su.manager.ui.component
 
 import android.util.Log
 import androidx.compose.animation.AnimatedVisibility

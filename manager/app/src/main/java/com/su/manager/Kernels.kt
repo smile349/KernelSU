@@ -1,4 +1,4 @@
-package com.su.mamager
+package com.su.manager
 
 import android.system.Os
 
@@ -13,7 +13,7 @@ data class KernelVersion(val major: Int, val patchLevel: Int, val subLevel: Int)
     }
 
     fun isGKI(): Boolean {
-        // 永远返回 false
+// 永远返回 false
         return false
     }
 }

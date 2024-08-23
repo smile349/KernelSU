@@ -1,4 +1,4 @@
-package com.su.mamager.ui.theme
+package com.su.manager.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

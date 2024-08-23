@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.su.mamager.ui.component.profile
+package com.su.manager.ui.component.profile
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -48,12 +48,12 @@ import com.maxkeppeler.sheets.input.models.ValidationResult
 import com.maxkeppeler.sheets.list.ListDialog
 import com.maxkeppeler.sheets.list.models.ListOption
 import com.maxkeppeler.sheets.list.models.ListSelection
-import com.su.mamager.Natives
-import com.su.mamager.R
-import com.su.mamager.profile.Capabilities
-import com.su.mamager.profile.Groups
-import com.su.mamager.ui.component.rememberCustomDialog
-import com.su.mamager.ui.util.isSepolicyValid
+import com.su.manager.Natives
+import com.su.manager.R
+import com.su.manager.profile.Capabilities
+import com.su.manager.profile.Groups
+import com.su.manager.ui.component.rememberCustomDialog
+import com.su.manager.ui.util.isSepolicyValid
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

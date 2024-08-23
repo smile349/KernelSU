@@ -1,4 +1,4 @@
-package com.su.mamager.ui.screen
+package com.su.manager.ui.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -28,11 +28,11 @@ import coil.request.ImageRequest
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.launch
-import com.su.mamager.Natives
-import com.su.mamager.R
-import com.su.mamager.ui.component.SearchAppBar
-import com.su.mamager.ui.screen.destinations.AppProfileScreenDestination
-import com.su.mamager.ui.viewmodel.SuperUserViewModel
+import com.su.manager.Natives
+import com.su.manager.R
+import com.su.manager.ui.component.SearchAppBar
+import com.su.manager.ui.screen.destinations.AppProfileScreenDestination
+import com.su.manager.ui.viewmodel.SuperUserViewModel
 
 @OptIn(ExperimentalMaterialApi::class)
 @Destination

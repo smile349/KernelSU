@@ -1,4 +1,4 @@
-package com.su.mamager.ui.viewmodel
+package com.su.manager.ui.viewmodel
 
 import android.os.SystemClock
 import android.util.Log
@@ -10,8 +10,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import com.su.mamager.ui.util.listModules
-import com.su.mamager.ui.util.overlayFsAvailable
+import com.su.manager.ui.util.listModules
+import com.su.manager.ui.util.overlayFsAvailable
 import org.json.JSONArray
 import org.json.JSONObject
 import java.text.Collator

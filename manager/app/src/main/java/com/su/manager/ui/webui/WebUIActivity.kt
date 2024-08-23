@@ -1,4 +1,4 @@
-package com.su.mamager.ui.webui
+package com.su.manager.ui.webui
 
 import android.annotation.SuppressLint
 import android.app.ActivityManager
@@ -11,7 +11,7 @@ import android.webkit.WebViewClient
 import androidx.activity.ComponentActivity
 import androidx.webkit.WebViewAssetLoader
 import com.topjohnwu.superuser.Shell
-import com.su.mamager.ui.util.createRootShell
+import com.su.manager.ui.util.createRootShell
 import java.io.File
 
 @SuppressLint("SetJavaScriptEnabled")

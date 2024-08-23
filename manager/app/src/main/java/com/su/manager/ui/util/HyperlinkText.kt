@@ -1,4 +1,4 @@
-package com.su.mamager.ui.util
+package com.su.manager.ui.util
 
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.material3.MaterialTheme

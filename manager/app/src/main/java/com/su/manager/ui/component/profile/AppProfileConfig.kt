@@ -1,4 +1,4 @@
-package com.su.mamager.ui.component.profile
+package com.su.manager.ui.component.profile
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.OutlinedTextField
@@ -11,9 +11,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.su.mamager.Natives
-import com.su.mamager.R
-import com.su.mamager.ui.component.SwitchItem
+import com.su.manager.Natives
+import com.su.manager.R
+import com.su.manager.ui.component.SwitchItem
 
 @Composable
 fun AppProfileConfig(

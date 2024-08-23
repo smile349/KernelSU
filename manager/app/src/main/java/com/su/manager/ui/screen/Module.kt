@@ -1,4 +1,4 @@
-package com.su.mamager.ui.screen
+package com.su.manager.ui.screen
 
 import android.app.Activity.RESULT_OK
 import android.content.Intent
@@ -68,21 +68,21 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.su.mamager.Natives
-import com.su.mamager.R
-import com.su.mamager.ui.component.ConfirmResult
-import com.su.mamager.ui.component.rememberConfirmDialog
-import com.su.mamager.ui.component.rememberLoadingDialog
-import com.su.mamager.ui.screen.destinations.FlashScreenDestination
-import com.su.mamager.ui.util.DownloadListener
-import com.su.mamager.ui.util.LocalSnackbarHost
-import com.su.mamager.ui.util.download
-import com.su.mamager.ui.util.hasMagisk
-import com.su.mamager.ui.util.reboot
-import com.su.mamager.ui.util.toggleModule
-import com.su.mamager.ui.util.uninstallModule
-import com.su.mamager.ui.viewmodel.ModuleViewModel
-import com.su.mamager.ui.webui.WebUIActivity
+import com.su.manager.Natives
+import com.su.manager.R
+import com.su.manager.ui.component.ConfirmResult
+import com.su.manager.ui.component.rememberConfirmDialog
+import com.su.manager.ui.component.rememberLoadingDialog
+import com.su.manager.ui.screen.destinations.FlashScreenDestination
+import com.su.manager.ui.util.DownloadListener
+import com.su.manager.ui.util.LocalSnackbarHost
+import com.su.manager.ui.util.download
+import com.su.manager.ui.util.hasMagisk
+import com.su.manager.ui.util.reboot
+import com.su.manager.ui.util.toggleModule
+import com.su.manager.ui.util.uninstallModule
+import com.su.manager.ui.viewmodel.ModuleViewModel
+import com.su.manager.ui.webui.WebUIActivity
 import okhttp3.OkHttpClient
 
 @Destination
